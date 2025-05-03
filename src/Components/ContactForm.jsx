@@ -16,20 +16,21 @@ const ContactForm = () => {
         formRef.current,
         "XG-tw72Kf5qtU2Z3g"
       )
-      .then(
-        (result) => {
-          console.log("Email sent", result.text);
-          setLoading(false);
-          setSent(true);
-          setTimeout(() => {
-            setSent(false);
-          }, 3000);
-        },
-        (error) => {
-          console.log("Error sending email", error.text);
-          setLoading(false);
-        }
-      );
+    .then(
+  (result) => {
+    console.log("Email sent", result.text);
+    setLoading(false);
+    setSent(true);
+    setTimeout(() => {
+      setSent(false);
+    }, 3000);
+  },
+  (error) => {
+    console.error("EmailJS Error:", error);
+    alert("There was an error submitting your order. Please try again.");
+    setLoading(false);
+  }
+);
   };
   return (
     <div id="order" className="bg-gray-100 px-4 md:px-12 lg:px-20 py-16">
@@ -108,7 +109,7 @@ const ContactForm = () => {
             Select Your Package
           </label>
           <select
-            name=" Silicone Folding Bottle"
+            name="package"
             className="p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
             required
           >
