@@ -13,10 +13,10 @@ const Footer = () => {
       <div className="space-y-1 text-center md:text-right">
         <p className="text-sm">Have questions? Reach out via:</p>
         <p className="text-sm">
-          <span className="font-medium">Email:</span> dropnest@gmail.com
+          <span className="font-medium">Email:</span> t.sholanke5@gmail.com
         </p>
         <p className="text-sm">
-          <span className="font-medium">Phone:</span> +234 1234567890
+          <span className="font-medium">Phone:</span> +2349071115021
         </p>
       </div>
     </div>
