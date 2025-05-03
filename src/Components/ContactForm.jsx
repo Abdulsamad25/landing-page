@@ -11,7 +11,7 @@ const ContactForm = () => {
     setLoading(true);
     emailjs
       .sendForm(
-        "service_0v1ffud",
+        "service_olz9723",
         "template_t6yjvtu",
         formRef.current,
         "XG-tw72Kf5qtU2Z3g"
